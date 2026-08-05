@@ -8,7 +8,7 @@
   <!-- SEO & Meta Tags -->
   <title>Adam Anto Jose | Cybersecurity Professional</title>
   <meta name="description"
-    content="Portfolio of Adam Anto Jose - Final-year B.Tech Computer Science student specializing in cloud security, IAM, SIEM operations, and vulnerability management.">
+    content="Portfolio of Adam Anto Jose -  B.Tech Computer Science graduate with a strong foundation in cloud security, IAM, SIEM operations, and vulnerability management.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Adam Anto Jose | Cybersecurity Professional">
@@ -77,7 +77,7 @@
       <h2 class="section-title reveal fade-right"><span class="mono accent">01.</span> About Me</h2>
       <div class="about-grid reveal fade-up">
         <div class="about-text">
-          <p>Hello! I'm a B.Tech computer science and engineering graduate specializing in <strong>cloud security, identity &
+          <p>Hello! I'm a Final-year B.Tech Computer Science student specializing in <strong>cloud security, identity &
               access management (IAM), SIEM operations, and vulnerability management</strong>.</p>
           <p>I am a hands-on builder of home security labs ranging from SIEM configurations and honeypots to robust PKI
             infrastructure. My dedication to practical threat analysis and continuous learning has earned me a
@@ -360,24 +360,56 @@
             </div>
           </div>
 
-        </div>
-      </div>
+          <div class="card simple-card" style="border-left: 4px solid #ef4444;">
+            <h3>Nmap Reconnaissance Lab (Attack/Defense Home Lab — Day 1: Recon)</h3>
+            <div class="pill-group wrap-group mt-15" style="margin: 15px 0;">
+              <span class="pill mono-pill">Nmap</span>
+              <span class="pill mono-pill">Wireshark</span>
+              <span class="pill mono-pill">Kali Linux</span>
+              <span class="pill mono-pill">Windows 10</span>
+              <span class="pill mono-pill">MITRE ATT&CK</span>
+            </div>
+            <p class="card-desc">Ran a full reconnaissance sweep (ping, SYN, UDP, service/version, OS, aggressive, and
+              default-script scans) from a Kali Linux attacker VM against a Windows 10 defender VM, then used Wireshark
+              on the defender side to capture and analyze exactly how each scan type behaves on the wire — SYN/ACK vs
+              RST/ACK signatures, ARP vs ICMP host discovery, TTL-based OS fingerprinting, and SMB/NSE script
+              interrogation. Mapped every technique to its corresponding MITRE ATT&CK tactic (Reconnaissance, TA0043)
+              and sub-techniques (T1595.001/T1595.002), documenting the attacker-side command and the defender-side
+              packet evidence for each scan.</p>
+            <div class="project-links mt-links" style="margin-top: 20px;">
+              <a href="https://github.com/adamaj44/nmap-reconnaissance-lab" target="_blank"
+                class="btn btn-outline sm-text" style="padding: 8px 16px; font-size: 13px;"><i
+                  class="fa-brands fa-github"></i> View on GitHub</a>
+              <a href="https://medium.com/@adamantojose/day-1-reconnaissance-how-i-scanned-my-own-network-and-got-caught-3c83202ce12e"
+                target="_blank" class="btn btn-outline sm-text" style="padding: 8px 16px; font-size: 13px;"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Read the Write-up</a>
+            </div>
+          </div>
 
-      <!-- ================= OTHER PROJECTS ================= -->
-      <div class="project-category reveal fade-up mt-repo" data-group="other">
-        <h4 class="mono accent" style="margin-bottom: 20px; font-size: 14px;">> Other Projects</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-angle-right accent"></i>
-            <a href="https://github.com/adamaj44/nmap-reconnaissance-lab" target="_blank"
-              class="text-link">nmap-reconnaissance-lab</a>
-          </li>
-          <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-angle-right accent"></i>
-            <a href="https://github.com/adamaj44/Linux-Memory-Injection-PoC" target="_blank"
-              class="text-link">Linux-Memory-Injection-PoC</a>
-          </li>
-        </ul>
+          <div class="card simple-card" style="border-left: 4px solid #ef4444;">
+            <h3>Linux Memory Injection PoC (Shared Object Injection & Memory Forensics)</h3>
+            <div class="pill-group wrap-group mt-15" style="margin: 15px 0;">
+              <span class="pill mono-pill">Linux</span>
+              <span class="pill mono-pill">LD_PRELOAD</span>
+              <span class="pill mono-pill">gcc</span>
+              <span class="pill mono-pill">strace</span>
+              <span class="pill mono-pill">Memory Forensics</span>
+            </div>
+            <p class="card-desc">Built a benign shared-object (.so) injection lab on Kali Linux to study how LD_PRELOAD
+              loads a library into a running process's memory space, then performed forensic analysis on the resulting
+              memory mappings. Used /proc/[PID]/maps to identify the file-backed executable mapping left by the injected
+              library, and strace to trace the openat() and mmap() syscalls the dynamic linker makes at load time. Also
+              tested detection of anonymous (non-file-backed) executable memory regions to compare forensic artifacts
+              between file-backed and shellcode-style injection techniques — a defensive-research exercise in what
+              injected modules actually look like in memory.</p>
+            <div class="project-links mt-links" style="margin-top: 20px;">
+              <a href="https://github.com/adamaj44/Linux-Memory-Injection-PoC" target="_blank"
+                class="btn btn-outline sm-text" style="padding: 8px 16px; font-size: 13px;"><i
+                  class="fa-brands fa-github"></i> View on GitHub</a>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </section>
